@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalonOneBill" language="javascript" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="868de7b8-0739-4b5c-9e8d-214febf0c561">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (8)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="appointmentId" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    a.appointmentId,
+    a.time,
+    a.date,
+    a.status,
+    e.employeeName,
+    hs.hairCutStyle,
+    hs.price,
+    c.customerName,
+    p.paymentId,
+    p.paymentType,
+    p.amount
+FROM 
+    appointment a
+JOIN 
+    employee e ON a.employeeId = e.employeeId
+JOIN 
+    haircut hs ON a.hairCutId = hs.hairCutId
+JOIN 
+    customer c ON a.customerId = c.customerId
+JOIN 
+    payment p ON a.appointmentId = p.appointmentId
+WHERE 
+    a.appointmentId = $P{appointmentId}]]>
+	</queryString>
+	<field name="appointmentId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="appointmentId"/>
+		<property name="com.jaspersoft.studio.field.label" value="appointmentId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="time"/>
+		<property name="com.jaspersoft.studio.field.label" value="time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
+	</field>
+	<field name="employeeName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="employeeName"/>
+		<property name="com.jaspersoft.studio.field.label" value="employeeName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="hairCutStyle" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="hairCutStyle"/>
+		<property name="com.jaspersoft.studio.field.label" value="hairCutStyle"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="haircut"/>
+	</field>
+	<field name="price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="price"/>
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="haircut"/>
+	</field>
+	<field name="customerName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="customerName"/>
+		<property name="com.jaspersoft.studio.field.label" value="customerName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="paymentId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="paymentId"/>
+		<property name="com.jaspersoft.studio.field.label" value="paymentId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="paymentType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="paymentType"/>
+		<property name="com.jaspersoft.studio.field.label" value="paymentType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<group name="appointmentId">
+		<groupExpression><![CDATA[$F{appointmentId}]]></groupExpression>
+	</group>
+	<group name="time">
+		<groupExpression><![CDATA[$F{time}]]></groupExpression>
+	</group>
+	<group name="date">
+		<groupExpression><![CDATA[$F{date}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<group name="employeeName">
+		<groupExpression><![CDATA[$F{employeeName}]]></groupExpression>
+	</group>
+	<group name="hairCutStyle">
+		<groupExpression><![CDATA[$F{hairCutStyle}]]></groupExpression>
+	</group>
+	<group name="price">
+		<groupExpression><![CDATA[$F{price}]]></groupExpression>
+	</group>
+	<group name="customerName">
+		<groupExpression><![CDATA[$F{customerName}]]></groupExpression>
+	</group>
+	<group name="paymentId">
+		<groupExpression><![CDATA[$F{paymentId}]]></groupExpression>
+	</group>
+	<group name="paymentType">
+		<groupExpression><![CDATA[$F{paymentType}]]></groupExpression>
+	</group>
+	<group name="amount">
+		<groupExpression><![CDATA[$F{amount}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="256" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<staticText>
+				<reportElement x="60" y="177" width="420" height="49" uuid="a7a17708-8fa2-4c25-9cd0-332ac35768b8"/>
+				<box leftPadding="28"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Kalutara-Matugama Rd, Matugama 12100 
+                        076 934 0018]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="264" height="170" uuid="0042f150-0f18-4fb5-a970-8aba1f659fc4"/>
+				<textElement>
+					<font size="45" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[SALON   
+         THE 
+             ONE 
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="29" y="250" width="482" height="1" uuid="0ab188c5-8006-4d83-b4bd-1b1a5ce05ac1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="362" y="120" width="167" height="56" uuid="2278ed27-6e49-4dba-ac69-58e7f89c2c12"/>
+				<box topPadding="16" leftPadding="29"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(PVT) Ltd]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="2" width="130" height="30" uuid="23e042f8-fd9d-4bc9-8456-7cc6d4bb208b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="107038dd-7ecc-42b6-b8ae-e3a7fd5e7f2a"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="0" rightPadding="0"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Appointment Id:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="6" width="90" height="30" uuid="e0501166-8707-49fa-a13a-a2678166728c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="107038dd-7ecc-42b6-b8ae-e3a7fd5e7f2a"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{appointmentId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="385" y="67" width="60" height="30" uuid="195a65ec-6635-4277-b610-efbf747fcf5c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f634891-cb0d-4b39-9ddd-59c915da537c"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="0"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="71" width="100" height="24" uuid="3325d1a2-e638-4fa9-b8b8-6092ab05f5a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f634891-cb0d-4b39-9ddd-59c915da537c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="65" width="56" height="30" uuid="0f99d014-235c-40f1-a184-da1011138e9e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41ae9be5-19c8-4f8f-9e31-01ff3b83695c"/>
+				</reportElement>
+				<box topPadding="4" leftPadding="1"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="81" y="71" width="46" height="20" uuid="536574a9-bc24-4262-aa05-10a565d46db6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41ae9be5-19c8-4f8f-9e31-01ff3b83695c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="32" width="100" height="30" uuid="7359b737-dd03-4170-82d9-5777c9fb6a4f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81f7505f-c27f-48b1-a699-d3ec34dc3b01"/>
+				</reportElement>
+				<box topPadding="4" leftPadding="0"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[payment Id:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="39" width="100" height="30" uuid="3a32475a-41e9-4ca8-b0e1-33384d9a99af">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81f7505f-c27f-48b1-a699-d3ec34dc3b01"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="202" y="0" width="102" height="30" uuid="2fd61ea1-7451-420e-ae6a-7b82353a9656">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5d27ce9-04ea-4dd0-b5bc-09b4bcf72407"/>
+				</reportElement>
+				<box topPadding="5"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="281" y="8" width="100" height="30" uuid="4e58ad2b-e211-4c77-ba4a-d9a97b588b90">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5d27ce9-04ea-4dd0-b5bc-09b4bcf72407"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="201" y="33" width="112" height="30" uuid="0d0d9c44-8523-49dd-b9c6-9b17e06f8f37">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fbd8c49-1752-40da-b42c-118e5c6856c2"/>
+				</reportElement>
+				<box topPadding="3"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Type:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="306" y="38" width="100" height="30" uuid="e953ac7a-89ce-45e8-9fa6-6e0e602b82bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fbd8c49-1752-40da-b42c-118e5c6856c2"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="385" y="3" width="88" height="30" uuid="378840ad-1583-425c-935b-b7a073de4610">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f00d53aa-9dd6-48da-8163-748cda31265c"/>
+				</reportElement>
+				<box topPadding="2"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="467" y="8" width="100" height="30" uuid="2cbe3c56-4b91-4f11-ae22-afd2d62b3699">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f00d53aa-9dd6-48da-8163-748cda31265c"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="385" y="32" width="58" height="30" uuid="ae15d776-2fa7-4bd1-a628-31624113d325">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbe3aeaa-29cf-4eaf-8a47-5addeb9e30c5"/>
+				</reportElement>
+				<box topPadding="4"/>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="437" y="38" width="100" height="30" uuid="e0874299-cc71-475b-8d10-31e90a66ed32">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbe3aeaa-29cf-4eaf-8a47-5addeb9e30c5"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Mongolian Baiti" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="31" y="98" width="482" height="1" uuid="dc5d0e82-6738-4f0f-8155-4f8ac6f4883e"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement x="31" y="2" width="140" height="30" uuid="0a146bf3-d272-4676-9ac3-a824a0fb55fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ee41154c-3f80-47d6-8c7e-c40f0b1e9550"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Franklin Gothic Heavy" size="22"/>
+				</textElement>
+				<text><![CDATA[hairCut  Style]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="2" width="100" height="34" uuid="6a584fd9-bd53-4405-98ab-6b4d34bf9a55">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="abce6030-0fa5-47a5-9098-1d0aa2dc91ab"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0"/>
+				<textElement>
+					<font fontName="Franklin Gothic Heavy" size="22"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="2" width="100" height="30" uuid="1f2d9bec-2e19-4dda-8b06-83bc628e69e4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7d70ffa5-e77c-49c1-940e-3299ae95c57e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Franklin Gothic Heavy" size="22"/>
+				</textElement>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="59" y="45" width="112" height="30" uuid="b3f3eb89-cd49-49b8-87c9-5aaaba46707c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25502965-deaf-4ece-a6ef-b4f252b2b740"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hairCutStyle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="46" width="100" height="30" uuid="89b916d3-e011-47b5-b8ce-c29aba57687f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60bff314-b61b-4eff-9909-4305853c8ea9"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="45" width="100" height="30" uuid="5b2eb4d6-a5ba-4656-8718-b09a167d870c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff001029-953a-462c-8c61-fb392dc3e928"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="31" y="37" width="482" height="1" uuid="95ef9cb4-4f90-48ea-8ebc-af33c547adce"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="30" y="69" width="482" height="1" uuid="0811d8c7-2af8-4491-8a58-1130c86221af"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="65" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement x="134" y="1" width="280" height="56" uuid="975a4f6a-09e3-4653-b111-0692762cd0c5"/>
+				<box topPadding="16" leftPadding="29"/>
+				<textElement>
+					<font fontName="SansSerif" size="16"/>
+				</textElement>
+				<text><![CDATA[Software By : Kushan Damitha]]></text>
+			</staticText>
+			<line>
+				<reportElement x="31" y="-19" width="482" height="1" uuid="03ae764f-a784-4b0f-b433-8ff2be45ef90"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="85" y="-35" width="353" height="78" uuid="ab8380b4-0709-4f80-8dd4-a252e7e6808d"/>
+				<box topPadding="21" leftPadding="57"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="30"/>
+				</textElement>
+				<text><![CDATA[Thanks ! Come again ! ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<staticText>
+				<reportElement x="296" y="-281" width="157" height="30" uuid="9e994b5b-6fd0-4601-bbbd-71e5bcf63805">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="587b8526-9553-45a4-a97e-2e0f93fb99ae"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Yu Gothic UI Semibold" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Net Total:   Rs.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="432" y="-282" width="100" height="30" uuid="9d2d460f-eabb-4048-ab28-acc52f64a126">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="587b8526-9553-45a4-a97e-2e0f93fb99ae"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

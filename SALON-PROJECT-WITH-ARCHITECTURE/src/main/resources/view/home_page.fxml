@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="806.0" prefWidth="1294.0" style="-fx-background-color: #edf2fb; -fx-border-width: 2; -fx-border-color: #ffbd0a;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.demokushan.controller.HomePageController">
+   <children>
+      <AnchorPane cache="true" layoutX="45.0" layoutY="126.0" prefHeight="378.0" prefWidth="838.0" style="-fx-background-color: #f7fbff; -fx-background-radius: 40;">
+         <effect>
+            <ColorAdjust brightness="-0.15" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="root2" cache="true" depthTest="ENABLE" layoutX="334.0" layoutY="137.0" prefHeight="167.0" prefWidth="245.0" style="-fx-background-color: #636e72; -fx-background-radius: 15;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="lblApCount" layoutX="37.0" layoutY="-3.0" prefHeight="118.0" prefWidth="121.0" text="100" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAppointment" blendMode="SRC_ATOP" layoutX="11.0" layoutY="76.0" prefHeight="75.0" prefWidth="220.0" text="Total Appointment" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="ADD" fitHeight="80.0" fitWidth="91.0" layoutX="121.0" layoutY="11.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/360_F_528038098.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" cache="true" depthTest="ENABLE" layoutX="76.0" layoutY="137.0" prefHeight="167.0" prefWidth="238.0" style="-fx-background-color: #636e72; -fx-background-radius: 15;">
+         <children>
+            <Label fx:id="lblCount" layoutX="40.0" layoutY="-3.0" prefHeight="118.0" prefWidth="121.0" text="100" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="ADD" fitHeight="72.0" fitWidth="83.0" layoutX="130.0" layoutY="16.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/Screenshot 2028.png" />
+               </image>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <Label fx:id="lblCustomer" blendMode="SRC_ATOP" layoutX="88.0" layoutY="214.0" prefHeight="83.0" prefWidth="226.0" text="Total Customer" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="root211" cache="true" depthTest="ENABLE" layoutX="76.0" layoutY="323.0" prefHeight="155.0" prefWidth="238.0" style="-fx-background-color: #636e72; -fx-background-radius: 15;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="lblEmployeeCount" layoutX="40.0" layoutY="-4.0" prefHeight="118.0" prefWidth="121.0" text="100" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmployee" blendMode="SRC_ATOP" layoutX="10.0" layoutY="71.0" prefHeight="95.0" prefWidth="226.0" text="Total Employee" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="ADD" fitHeight="78.0" fitWidth="71.0" layoutX="129.0" layoutY="11.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/Screenshot 2022.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root2111" cache="true" depthTest="ENABLE" layoutX="601.0" layoutY="138.0" prefHeight="353.0" prefWidth="248.0" style="-fx-background-color: #7ed6df; -fx-background-radius: 15;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="lblFullPaymentCount" layoutX="9.0" prefHeight="115.0" prefWidth="212.0" text="100" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="MULTIPLY" fitHeight="176.0" fitWidth="246.0" layoutX="1.0" layoutY="166.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/cbc13e28175dff0d7ed62db5998d365c.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="0.04" />
+               </effect>
+            </ImageView>
+            <Label fx:id="lblFullPayment" blendMode="SRC_ATOP" layoutX="12.0" layoutY="71.0" prefHeight="86.0" prefWidth="224.0" text="Full Payment Amount" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root21111" cache="true" depthTest="ENABLE" layoutX="334.0" layoutY="322.0" prefHeight="155.0" prefWidth="248.0" style="-fx-background-color: #636e72; -fx-background-radius: 15;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="lblSupplierCount" layoutX="37.0" layoutY="-3.0" prefHeight="118.0" prefWidth="207.0" text="100" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSupplier" blendMode="SRC_ATOP" layoutX="10.0" layoutY="73.0" prefHeight="89.0" prefWidth="224.0" text="Total Supplier" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="ADD" fitHeight="89.0" fitWidth="116.0" layoutX="101.0" layoutY="8.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/Screenshot 2024.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="133.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello ! Tharanga." wrappingWidth="292.99995117187495">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="19.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/sloonowner.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="651.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Automatically assingned details" wrappingWidth="245.60000000000008">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <AnchorPane cache="true" layoutX="162.0" layoutY="529.0" prefHeight="210.0" prefWidth="556.0" style="-fx-background-color: white; -fx-background-radius: 40;">
+         <effect>
+            <ColorAdjust brightness="-0.15" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="root2121" cache="true" depthTest="ENABLE" layoutX="445.0" layoutY="550.0" prefHeight="160.0" prefWidth="238.0" style="-fx-background-color: #eb2f06; -fx-background-radius: 15;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="lblInCompleteCount" layoutX="29.0" layoutY="-3.0" prefHeight="118.0" prefWidth="121.0" text="100" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInCompleteAppointment" blendMode="SRC_ATOP" layoutX="13.0" layoutY="73.0" prefHeight="86.0" prefWidth="214.0" text="Rejected Appointment" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="MULTIPLY" fitHeight="97.0" fitWidth="110.0" layoutX="109.0" layoutY="4.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/download (1).png" />
+               </image>
+               <effect>
+                  <ColorAdjust hue="1.0" saturation="-0.04" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root213" cache="true" depthTest="ENABLE" layoutX="187.0" layoutY="552.0" prefHeight="125.0" prefWidth="238.0" style="-fx-background-color: #44bd32; -fx-background-radius: 15;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="lblCompleteCount" layoutX="31.0" layoutY="-3.0" prefHeight="118.0" prefWidth="121.0" text="100" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="53.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCompleteAppointment" blendMode="SRC_ATOP" layoutX="12.0" layoutY="76.0" prefHeight="83.0" prefWidth="220.0" text="Accepted Appointment" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="DARKEN" fitHeight="78.0" fitWidth="91.0" layoutX="123.0" layoutY="10.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/calendar-icon-concept-schedule-appointment-vector-35387823.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <PieChart fx:id="PieChart" layoutX="891.0" layoutY="97.0" prefHeight="375.0" prefWidth="380.0" />
+      <JFXButton layoutX="2.0" layoutY="68.0" onAction="#btnProfileeOnAction" prefHeight="30.0" prefWidth="94.0" text="Profile">
+         <font>
+            <Font name="Tw Cen MT" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblDate" layoutX="1141.0" layoutY="744.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="1080.0" layoutY="743.0" prefHeight="32.0" prefWidth="85.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="81.0" layoutY="744.0" prefHeight="31.0" prefWidth="110.0" text="Label">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="743.0" prefHeight="32.0" prefWidth="85.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Line endX="1258.500244140625" endY="832.36669921875" layoutX="4.0" layoutY="-33.0" startX="1258.500244140625" startY="32.999996185302734" stroke="#ffbd0a" strokeWidth="3.0" />
+      <Line endX="1258.500244140625" endY="832.36669921875" layoutX="14.0" layoutY="-42.0" startX="-14.000016212463379" startY="832.36669921875" stroke="#ffbd0a" strokeWidth="3.0" />
+      <ImageView blendMode="DARKEN" fitHeight="327.0" fitWidth="470.0" layoutX="732.0" layoutY="464.0" pickOnBounds="true">
+         <image>
+            <Image url="@../icon/haircutter-cutting-beard-man-barber-shop_82574-11754.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

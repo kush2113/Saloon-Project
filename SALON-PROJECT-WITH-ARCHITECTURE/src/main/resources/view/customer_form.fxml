@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="792.0" prefWidth="1263.0" style="-fx-background-color: #d1d8e0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.demokushan.controller.CustomerFormController">
+   <children>
+      <Rectangle fx:id="rectangal" arcHeight="5.0" arcWidth="5.0" height="793.0" stroke="#ffd200" strokeType="INSIDE" strokeWidth="2.0" width="1265.0">
+         <fill>
+            <LinearGradient endX="0.1666666589903109" endY="0.8333333319786823" startX="0.18560602448203337" startY="0.23390151515151558">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.19607843458652496" green="0.4941176474094391" blue="0.6431372761726379" opacity="0.9900000095367432" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="309.0" layoutX="107.0" layoutY="53.0" stroke="#ffd200" strokeType="INSIDE" strokeWidth="5.0" width="1066.0" />
+      <Text fill="WHITE" layoutX="208.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name : " wrappingWidth="177.28307056427002">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtName" layoutX="364.0" layoutY="147.0" onKeyReleased="#nameKeyReleaseAction" prefHeight="29.0" prefWidth="228.0" />
+      <Text fill="WHITE" layoutX="207.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id        :" wrappingWidth="163.8583984375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtId" layoutX="363.0" layoutY="68.0" onKeyReleased="#idKeyReleaseOnAction" prefHeight="29.0" prefWidth="228.0" />
+      <Text fill="WHITE" layoutX="209.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="680.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Addres    :" wrappingWidth="114.99755859374994">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtPhoneNumber" layoutX="363.0" layoutY="226.0" onKeyReleased="#numberKeyReleaseOnAction" prefHeight="29.0" prefWidth="228.0" />
+      <TextField fx:id="txtAddress" layoutX="771.0" layoutY="69.0" onKeyReleased="#addressKeyReleaseAction" prefHeight="29.0" prefWidth="228.0" />
+      <Text fill="WHITE" layoutX="679.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email       :" wrappingWidth="106.68585205078125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtEmail" layoutX="772.0" layoutY="146.0" onKeyReleased="#emailKeyReleaseAction" prefHeight="29.0" prefWidth="228.0" />
+      <TableView fx:id="TbleCustomer" layoutX="137.0" layoutY="389.0" opacity="0.91" prefHeight="374.0" prefWidth="1010.0" style="-fx-background-color: #a4b0be;">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="166.93333435058594" text="Customer Name" />
+          <TableColumn fx:id="colId" prefWidth="164.26666259765625" text="Customer Id" />
+            <TableColumn fx:id="colNumber" prefWidth="201.33340454101562" text="Phone Number" />
+            <TableColumn fx:id="colAddress" prefWidth="173.3333740234375" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="162.666748046875" text="Email" />
+            <TableColumn fx:id="colStatus" prefWidth="141.60001220703123" text="Status" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="678.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status      :" wrappingWidth="116.3408203125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+<!--      <JFXButton buttonType="RAISED" layoutX="520.0" layoutY="72.0" onAction="#btnSearchOnAction" prefHeight="12.0" prefWidth="64.0" style="-fx-background-color: #0466c8; -fx-background-radius: 12;" text="Search" textFill="WHITE">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="10.0" />-->
+<!--         </font>-->
+<!--      </JFXButton>-->
+      <JFXButton buttonType="RAISED" layoutX="646.0" layoutY="296.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #0466c8; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="870.0" layoutY="296.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #0466c8; -fx-background-radius: 20;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="757.0" layoutY="296.0" onAction="#btnUpadateOnAction" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #0466c8; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="983.0" layoutY="296.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbStatus" focusColor="#03bcffe4" layoutX="772.0" layoutY="226.0" prefHeight="29.0" prefWidth="228.0" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXComboBox>
+      <TextField fx:id="txtSearch" layoutX="361.0" layoutY="8.0" onAction="#btnSearchchOnAction" onKeyReleased="#idKeyReleaseOnAction" prefHeight="38.0" prefWidth="642.0" promptText="   Search" style="-fx-background-radius: 20; -fx-border-color: #ffd200; -fx-border-width: 3; -fx-border-radius: 20;">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></TextField>
+   </children>
+</AnchorPane>

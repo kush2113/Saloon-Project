@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="791.0" prefWidth="1264.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.demokushan.controller.FeedbackFormController">
+   <children>
+      <Rectangle fx:id="rectangal" arcHeight="5.0" arcWidth="5.0" height="792.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1264.0">
+         <fill>
+            <LinearGradient endX="0.09090909090909084" endY="1.0" startX="0.18560605518745654" startY="0.4469696319464482">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.19607843458652496" green="0.4941176474094391" blue="0.6431372761726379" opacity="0.9900000095367432" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b1b1b1" height="305.0" layoutX="105.0" layoutY="36.0" opacity="0.31" stroke="BLACK" strokeType="INSIDE" width="1063.0" />
+      <ImageView fitHeight="792.0" fitWidth="1264.0" opacity="0.34" pickOnBounds="true">
+         <image>
+            <Image url="@../icon/Saloon.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="146.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feedback Id          :" wrappingWidth="196.13332824707038">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtFId" layoutX="324.0" layoutY="58.0" prefHeight="38.0" prefWidth="228.0" />
+      <Text fill="WHITE" layoutX="147.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Id   :" wrappingWidth="201.99995117187507">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="634.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment              :" wrappingWidth="181.73334960937507">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtComment" layoutX="814.0" layoutY="57.0" prefHeight="38.0" prefWidth="228.0" />
+      <TableView fx:id="TableFeedback" layoutX="138.0" layoutY="402.0" opacity="0.91" prefHeight="363.0" prefWidth="851.0" style="-fx-background-color: #a4b0be;">
+         <columns>
+            <TableColumn fx:id="colFId" prefWidth="240.5333251953125" text="Feedback Id" />
+            <TableColumn fx:id="colComment" prefWidth="287.46673583984375" text="Comment" />
+            <TableColumn fx:id="colAppointmentId" prefWidth="208.00002441406252" text="Appointment Id" />
+            <TableColumn fx:id="colAction" prefWidth="112.8000366210938" text="Action" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="cmbAppointmentId" layoutX="324.0" layoutY="149.0" prefHeight="38.0" prefWidth="228.0" />
+   </children>
+</AnchorPane>

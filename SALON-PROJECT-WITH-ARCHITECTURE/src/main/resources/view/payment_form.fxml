@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="791.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.demokushan.controller.PaymentFormController">
+   <children>
+      <Rectangle fx:id="rectangal" arcHeight="5.0" arcWidth="5.0" height="794.0" stroke="#ffd200" strokeType="INSIDE" strokeWidth="2.0" width="1265.0">
+         <fill>
+            <LinearGradient endX="0.09090910445560103" endY="1.0" startX="0.07954544641754845" startY="0.294507597431992">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.19607843458652496" green="0.4941176474094391" blue="0.6431372761726379" opacity="0.9900000095367432" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="249.0" layoutX="105.0" layoutY="57.0" stroke="#ffd200" strokeType="INSIDE" strokeWidth="5.0" width="1062.0" />
+      <TableView fx:id="tablePayment" layoutX="148.0" layoutY="352.0" prefHeight="404.0" prefWidth="983.0" style="-fx-background-color: #a4b0be;">
+         <columns>
+            <TableColumn fx:id="colPId" prefWidth="219.19998168945312" text="Payment Id" />
+            <TableColumn fx:id="colPType" prefWidth="272.0000305175781" text="Payment Type" />
+            <TableColumn fx:id="colAppointmentId" minWidth="3.2000732421875" prefWidth="240.0" text="Appointment Id" />
+            <TableColumn fx:id="colAmount" prefWidth="255.7333984375" text="Amount" />
+         </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="209.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Id         :" wrappingWidth="166.80000000000007">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="678.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Id  :" wrappingWidth="176.40003662109382">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="678.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount               :" wrappingWidth="167.86669616699226">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="210.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Type    :" wrappingWidth="178.00002136230466">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtId" layoutX="365.0" layoutY="80.0" onKeyReleased="#idKeyReleaseOnAction" prefHeight="29.0" prefWidth="228.0" />
+      <TextField fx:id="txtTyp" layoutX="363.0" layoutY="162.0" onKeyReleased="#typeKeyReleaseOnAction" prefHeight="29.0" prefWidth="228.0" />
+      <TextField fx:id="txtAmount" layoutX="837.0" layoutY="162.0" onKeyReleased="#amountKeyReleaseOnAction" prefHeight="29.0" prefWidth="228.0" />
+      <JFXButton buttonType="RAISED" layoutX="728.0" layoutY="242.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #0466c8; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="842.0" layoutY="242.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #0466c8; -fx-background-radius: 20;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="956.0" layoutY="242.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbAppointmentId" focusColor="#03bcffe4" layoutX="836.0" layoutY="77.0" prefHeight="29.0" prefWidth="228.0" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXComboBox>
+      <TextField fx:id="txtSearch" layoutX="366.0" layoutY="10.0" onAction="#btnSearchchOnAction" onKeyReleased="#idKeyReleaseOnAction" prefHeight="38.0" prefWidth="642.0" promptText="   Search" style="-fx-background-radius: 20; -fx-border-color: #ffd200; -fx-border-width: 3; -fx-border-radius: 20;">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

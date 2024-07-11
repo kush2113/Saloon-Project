@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="792.0" prefWidth="1537.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.demokushan.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="799.0" fitWidth="1558.0" layoutY="-6.0" opacity="0.86" pickOnBounds="true">
+         <image>
+            <Image url="@../icon/scissors-hair-trimmer-copy-space.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" focusTraversable="true" height="703.0" layoutX="41.0" layoutY="44.0" onKeyTyped="#btnNameOnAction" opacity="0.05" stroke="WHITE" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="10.0" width="511.0" />
+      <TextField fx:id="txtName" layoutX="145.0" layoutY="329.0" onAction="#btnNameOnAction"  opacity="0.33" prefHeight="34.0" prefWidth="282.0" promptText="User Name" style="-fx-background-radius: 20;" />
+      <Text fill="WHITE" layoutX="145.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#fffefe" layoutX="144.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="98.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Salon the one" wrappingWidth="395.875">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="txtPassword" layoutX="144.0" layoutY="421.0" onAction="#btnPasswordOnAction"  opacity="0.33" prefHeight="34.0" prefWidth="282.0" promptText="Password" style="-fx-background-radius: 20;" />
+      <Text fill="WHITE" layoutX="583.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!" wrappingWidth="365.4001281738281">
+         <font>
+            <Font name="Bookman Old Style" size="76.0" />
+         </font>
+      </Text>
+      <ImageView blendMode="LIGHTEN" cache="true" cacheHint="QUALITY" fitHeight="316.0" fitWidth="444.0" layoutX="519.0" layoutY="372.0" opacity="0.35" pickOnBounds="true">
+         <effect>
+            <ColorAdjust brightness="0.64" contrast="0.46" hue="0.05" />
+         </effect>
+         <image>
+            <Image url="@../icon/Screenshot.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="COLOR_BURN" fitHeight="41.0" fitWidth="43.0" layoutX="92.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/Screenshot 2024-05-08.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="COLOR_BURN" fitHeight="41.0" fitWidth="43.0" layoutX="92.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/Screenshot 2021.png" />
+         </image>
+      </ImageView>
+      <Text fill="#dcb748" layoutX="203.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" underline="true" wrappingWidth="263.6083221435547">
+         <font>
+            <Font name="System Bold" size="66.0" />
+         </font></Text>
+      <JFXButton buttonType="RAISED" layoutX="189.0" layoutY="524.0" onAction="#btnLoginOnAction" prefHeight="43.0" prefWidth="185.0" ripplerFill="#00b1fc" style="-fx-background-color: #00a8ff; -fx-background-radius: 12;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+   <effect>
+      <ColorAdjust contrast="1.0" />
+   </effect>
+</AnchorPane>
